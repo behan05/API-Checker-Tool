@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find Friend</title>
+    <link rel="stylesheet" href="./public/styles/landing.css" />
+
+    <!-- Remix-Icon Links -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Font Links -->
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <!-- Cursor -->
+    <div id="cursor"></div>
+    <!--  HEADER SECTION -->
+    <header>
+      <div id="logo">
+        <a href="./index.html" draggable="false">
+          <img
+            src="./public/images/logo.webp"
+            alt="website-logo"
+            title="Click To Refresh Current Position"
+          />
+        </a>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#" aria-label="About Section">ABOUT</a></li>
+          <li><a href="#" aria-label="Download Section">DOWNLOAD</a></li>
+          <li><a href="#" aria-label="Feature Section">FEATURE</a></li>
+          <li><a href="#" aria-label="Contact Section">CONTACT</a></li>
+          <li><a href="#" aria-label="Sign In">SIGN UP</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- LANDING MAIN SECTION -->
+
+    <main>
+      <div class="main-container">
+        <section id="introduction">
+          <h1>Connect with Friends Instantly!</h1>
+          <p>
+            Find new friends and chat in real time. Join our community today!
+          </p>
+          <button class="cta-button">Get Started</button>
+        </section>
+
+        <section id="visuals">
+          <img
+            src="./public/images/chat-illustration.png"
+            alt="Chat Illustration"
+            id="illustration"
+            draggable="false"
+          />
+        </section>
+      </div>
+    </main>
+
+    <!-- Link GSAP and JS Source -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./public/scripts/landing.js"></script>
+  </body>
+</html>
