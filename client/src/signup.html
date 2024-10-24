@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SIGN UP</title>
+    <link rel="stylesheet" href="../public/styles/signup.css" />
+    <!-- Remix-Icon Links -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Font Links -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <form id="signup-form">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required />
+
+      <label for="confirm-password">Confirm Password:</label>
+      <input
+        type="password"
+        id="confirm-password"
+        name="confirm-password"
+        required
+      />
+
+      <label for="profile-picture">Profile Picture (Optional):</label>
+      <input
+        type="file"
+        id="profile-picture"
+        name="profile-picture"
+        accept="image/*"
+      />
+
+      <label for="full-name">Full Name (Optional):</label>
+      <input type="text" id="full-name" name="full-name" />
+
+      <label for="dob">Date of Birth (Optional):</label>
+      <input type="date" id="dob" name="dob" />
+
+      <label for="phone-number">Phone Number (Optional):</label>
+      <input type="text" id="phone-number" name="phone-number" />
+
+      <button type="submit">Confirm</button>
+    </form>
+
+    <!-- Link GSAP and JS Source -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="../public/scripts/signup.js"></script>
+  </body>
+</html>
