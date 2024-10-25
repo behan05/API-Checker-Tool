@@ -99,7 +99,7 @@ nav a:hover {
 /* FORM STYLING */
 
 .form-container {
-  max-width: 40vw;
+  max-width: 50vw;
   max-height: 100vh;
   overflow-y: scroll;
   margin: 0 auto;
