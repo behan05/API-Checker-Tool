@@ -106,10 +106,40 @@ function textAnimation() {
 //     textAnimation();
 // };
 
+// Navbar menu script.
+// Select the open menu icon, close menu icon, and nav element
+const openMenuIcon = document.querySelector('.openMenu');
+const closeMenuIcon = document.querySelector('.closeMenu');
+const navMenu = document.querySelector('nav ul');
+
+// Function to show the menu when openMenuIcon is clicked
+function openMenu() {
+    navMenu.style.display = 'block'; // Show the nav
+    navMenu.classList.add("navUlStyle")
+    openMenuIcon.style.display = 'none'; // Hide the open menu icon
+    closeMenuIcon.style.display = 'block'; // Show the close menu icon
+
+    gsap.from("nav ul li", {
+        x: 300,
+        scale: 0,
+        opacity: 0,
+        stagger: 0.2
+    })
+}
+
+// Function to hide the menu when closeMenuIcon is clicked
+function closeMenu() {
+    navMenu.style.display = 'none'; // Hide the nav
+    navMenu.classList.add("navUlStyle")
+    openMenuIcon.style.display = 'block'; // Show the open menu icon
+    closeMenuIcon.style.display = 'none'; // Hide the close menu icon
+}
+
 window.addEventListener("DOMContentLoaded", () => {
     avoidBrowserMenu();
     followCursor();
     animateLogo();
     animateNav();
     textAnimation();
+    closeMenuIcon.style.display = 'none'; // Initially hide the close menu icon
 })
