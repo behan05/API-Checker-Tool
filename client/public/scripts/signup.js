@@ -1,3 +1,60 @@
+const signupForm = document.getElementById("signup-form");
+signupForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const userName = document.getElementById("username").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    const confirmPassword = document.getElementById("confirm-password").value;
+    const fullName = document.getElementById("full-name").value;
+    const dob = document.getElementById("dob").value;
+    const phoneNumber = document.getElementById("phone-number").value;
+
+    try {
+        const response = await fetch("http://localhost:5000/api/auth/signup", {
+            method: "POST",
+            headers: {
+                "content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                userName,
+                email,
+                password,
+                confirmPassword,
+                fullName,
+                dob,
+                phoneNumber
+            })
+        })
+
+        if (!response.ok) {
+            throw new Error("Failed to sign up");
+        }
+
+        const result = await response.json();
+        alert(result.message || "Signup successful!"); // Display server response
+
+        location.href = "http://127.0.0.1:5500/client/index.html"; // Redirect after success
+        
+    } catch (error) {
+        console.error("Error:", error.message);
+        alert("An error occurred while sending the request.");
+    }
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Follow white rounded div to curser when cursor move over window.
 function followCursor() {
     const cursor = document.getElementById("cursor");
@@ -97,3 +154,4 @@ window.addEventListener("DOMContentLoaded", () => {
     formAnimation();
     closeMenuIcon.style.display = 'none'; // Initially hide the close menu icon
 })
+
