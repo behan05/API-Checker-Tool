@@ -1,25 +1,31 @@
-const express = require('express');
+const express = require("express");
 const app = express();
-const dotenv = require('dotenv');
-dotenv.config();
+const dotenv = require("dotenv");
+const connectDB = require("./config/db");
 
-//  import and run this database connection
-const connectDB = require('./config/db');
+// Connect Database.
 connectDB();
 
-// Middleware (e.g., JSON parsing)
+const cors = require('cors');
+app.use(cors());
+
+// load environment variable.
+dotenv.config();
+
+// middleware, every coming request go through this middleware.
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-// Import Routes
-const authRoutes = require('./routes/auth');
-const chatRoutes = require('./routes/chat');
+// require routes folder
+const routes = require("./routes/userAuth");
 
-// Use Routes
-app.use('/api/auth', authRoutes);  // For authentication routes
-app.use('/api/chat', chatRoutes);  // For chat-related routes
+// attached all routes with prefix.
+app.use("/api/auth", routes);
 
-// Start the server
-const PORT = process.env.PORT || 5000;
+// PORT is initially in Development mode.
+const PORT = process.env.PORT || 3000;
+
+// server listen for request on provided PORT.
 app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+    console.log(`Server is running at ${PORT}`);
 });
