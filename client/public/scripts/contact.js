@@ -18,7 +18,7 @@ function fetchDataPassToServer() {
                     email,
                     userMessage
                 })
-            });
+            }); 
 
             if (!response.ok) {
                 // convert respons json into js object.
@@ -26,7 +26,7 @@ function fetchDataPassToServer() {
                 throw new Error(`Error: ${errorData.message || response.statusText}`);
             } else {
                 const data = await response.json();
-                alert("Request sent successfully: " + datamessage);
+                alert("Request sent successfully: " + data.message);
 
                 // Clear form fields after submission
                 form.reset();
