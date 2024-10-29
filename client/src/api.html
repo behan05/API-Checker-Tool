@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Developer UI</title>
+    <link rel="stylesheet" href="../public/styles/api.css" />
+
+    <!-- Remix-Icon Links -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Font Links -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Cursor -->
+    <div id="cursor"></div>
+    <!--  HEADER SECTION -->
+    <header>
+      <div id="logo">
+        <a href="" draggable="false">
+          <img
+            src="../public/images/logo.webp"
+            alt="website-logo"
+            title="Click To Refresh Current Position"
+          />
+        </a>
+      </div>
+
+      <nav>
+        <ul>
+          <li>
+            <a
+              href="https://behan05.github.io/Production-portfolio/"
+              aria-label="About Portfolio"
+              >PORTFOLIO</a
+            >
+          </li>
+          <li><a href="#" aria-label="Document Section">DOCUMENT</a></li>
+          <li><a href="#" aria-label="API Section">API</a></li>
+          <li><a href="#" aria-label="Weather Section">WEATHER</a></li>
+          <li><a href="#" aria-label="Sign Up">SIGN UP</a></li>
+        </ul>
+
+        <!-- open/close menu icons -->
+        <div class="header__icons">
+          <i class="ri-menu-3-line openMenu" onclick="openMenu()"></i>
+          <i class="ri-close-large-fill closeMenu" onclick="closeMenu()"></i>
+        </div>
+      </nav>
+    </header>
+
+    <main class="apiContainer">
+      <div class="title">
+        <h1>User Management API Interface</h1>
+        <p>
+          Welcome to the User Management API interface. Here, developers can
+          interact with the user database using HTTP methods like <b>GET</b>,
+          <b>POST</b>,and <b>PATCH</b>. Select a method, enter the required
+          details, and receive real-time responses from the server. This
+          interface is designed to make it easy to manage user data efficiently
+          and view results instantly in a <b>developer-friendly</b> format.
+        </p>
+      </div>
+
+      <div class="formContainer">
+        <form id="requestForm">
+          <!-- Method Selection -->
+          <label for="method">Select Method:</label>
+          <select name="method" id="method" onchange="toggleBodyInput()">
+            <option value="GET">GET</option>
+            <option value="POST">POST</option>
+            <option value="PATCH">PATCH</option>
+          </select>
+
+          <!-- URL Input -->
+          <input
+            type="text"
+            name="url"
+            id="url"
+            placeholder="Enter URL"
+            required
+          />
+          <!-- Submit Button -->
+          <button type="button" onclick="submitRequest()">Send Request</button>
+          <!-- Body Data Input (only for POST and PATCH) -->
+          <div id="bodyContainer" style="display: none">
+            <textarea
+              name="body"
+              id="body"
+              placeholder='Body Data (JSON): {"key": "value"}'
+              cols="1"
+              rows="20"
+            ></textarea>
+          </div>
+        </form>
+      </div>
+
+      <div id="responseData"></div>
+    </main>
+
+    <!-- Link GSAP and JS Source -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="../public/scripts/api.js"></script>
+  </body>
+</html>
