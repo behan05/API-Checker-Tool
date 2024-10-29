@@ -5,7 +5,6 @@ const connectDB = require("./config/db");
 
 // Connect Database.
 connectDB();
-
 const cors = require('cors');
 app.use(cors());
 
@@ -18,9 +17,13 @@ app.use(express.urlencoded({ extended: true }));
 
 // require routes folder
 const routes = require("./routes/userAuth");
+const contactRoute = require("./routes/contactRoute");
+const userAPI = require("./routes/users.api");
 
 // attached all routes with prefix.
 app.use("/api/auth", routes);
+app.use("/api/support", contactRoute);
+app.use("/api/data", userAPI);
 
 // PORT is initially in Development mode.
 const PORT = process.env.PORT || 3000;

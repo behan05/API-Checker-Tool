@@ -8,10 +8,10 @@ const signup = async (req, res) => {
         return res.status(400).json({ error: "Invalid data format" });
     }
 
-    const { 
-        userName, 
-        email, 
-        password, 
+    const {
+        userName,
+        email,
+        password,
         confirmPassword,
         fullName,
         dob,
@@ -30,9 +30,9 @@ const signup = async (req, res) => {
             email: email,
             password: password,
             confirmPassword: confirmPassword,
-            fullName:fullName,
-            dob:dob,
-            phoneNumber:phoneNumber
+            fullName: fullName,
+            dob: dob,
+            phoneNumber: phoneNumber
 
         });
 
