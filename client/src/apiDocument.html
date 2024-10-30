@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Management API Documentation</title>
+    <link rel="stylesheet" href="../public/styles/apiDocument.css" />
+
+    <!-- Remix-Icon Links -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Font Links -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Cursor -->
+    <div id="cursor"></div>
+    <!--  HEADER SECTION -->
+    <header>
+      <div id="logo">
+        <a href="" draggable="false">
+          <img
+            src="../public/images/logo.webp"
+            alt="website-logo"
+            title="Click To Refresh Current Position"
+          />
+        </a>
+      </div>
+
+      <nav>
+        <ul>
+          <li>
+            <a
+              href="https://behan05.github.io/Production-portfolio/"
+              aria-label="About Portfolio"
+              >PORTFOLIO</a
+            >
+          </li>
+          <li><a href="#" aria-label="Document Section">API DOCS</a></li>
+          <li><a href="#" aria-label="API Section">API</a></li>
+          <li><a href="#" aria-label="Weather Section">WEATHER</a></li>
+          <li><a href="#" aria-label="Sign Up">SIGN UP</a></li>
+        </ul>
+
+        <!-- open/close menu icons -->
+        <div class="header__icons">
+          <i class="ri-menu-3-line openMenu" onclick="openMenu()"></i>
+          <i class="ri-close-large-fill closeMenu" onclick="closeMenu()"></i>
+        </div>
+      </nav>
+    </header>
+
+    <div class="mainContainer">
+      <aside>
+        <h3>API Documentation</h3>
+
+        <ul>
+          <li><a href="#overview">Overview</a></li>
+          <li>
+            <a href="#http-methods">HTTP Methods</a>
+            <ul>
+              <li><a href="#get-method">GET</a></li>
+              <li><a href="#post-method">POST</a></li>
+              <li><a href="#patch-method">PATCH</a></li>
+            </ul>
+          </li>
+          <li><a href="#weather-api">Weather API</a></li>
+        </ul>
+      </aside>
+
+      <main>
+        <h1>User Management API Documentation</h1>
+
+        <div class="docsOverview">
+          <h2>Overview</h2>
+          <p>
+            The User Management API allows developers to interact with user data
+            using standard HTTP methods. This documentation provides details on
+            how to use each method, including required parameters and example
+            requests.
+          </p>
+        </div>
+
+        <div class="mainSection">
+          <h2>HTTP Methods</h2>
+
+          <h3>GET</h3>
+          <p>Use the GET method to retrieve user information.</p>
+          <h4>Endpoint</h4>
+          <code>GET /users</code>
+          <h4>Parameters</h4>
+          <ul>
+            <li><code>id</code> (optional): The ID of the user to retrieve.</li>
+          </ul>
+          <h4>Example Request</h4>
+          <pre>GET http://localhost:5000/api/data/users</pre>
+          <h4>Example Response</h4>
+
+          <pre>
+{"users": [
+            {
+                "id": 1,
+                "name": "John Doe",
+                "email": "john@example.com"
+            },
+            {
+                "id": 2,
+                "name": "Jane Smith",
+                "email": "jane@example.com"
+            }
+          ]
+        }
+         </pre
+          >
+
+          <h3>POST</h3>
+          <p>Use the POST method to create a new user.</p>
+          <h4>Endpoint</h4>
+          <code>POST /users</code>
+          <h4>Request Body</h4>
+          <pre>
+  {
+      "name": "New User",
+      "email": "newuser@example.com"
+  }
+              </pre
+          >
+
+          <h4>Example Request</h4>
+          <pre>
+  POST https://api.example.com/users
+  Content-Type: application/json
+  
+  {
+      "name": "New User",
+      "email": "newuser@example.com"
+  }
+              </pre
+          >
+
+          <h4>Example Response</h4>
+          <pre>
+  {
+      "id": 3,
+      "name": "New User",
+      "email": "newuser@example.com"
+  }
+              </pre
+          >
+
+          <h3>PATCH</h3>
+          <p>Use the PATCH method to update an existing user.</p>
+          <h4>Endpoint</h4>
+          <code>PATCH /users/{id}</code>
+          <h4>Request Body</h4>
+          <pre>
+  {
+      "name": "Updated User"
+  }
+              </pre
+          >
+
+          <h4>Example Request</h4>
+          <pre>
+  PATCH https://api.example.com/users/1
+  Content-Type: application/json
+  
+  {
+      "name": "Updated User"
+  }
+              </pre
+          >
+          <h4>Example Response</h4>
+          <pre>
+  {
+      "id": 1,
+      "name": "Updated User",
+      "email": "john@example.com"
+  }
+              </pre
+          >
+        </div>
+
+        <div class="section">
+          <h2>Weather API Example</h2>
+          <p>To get weather information, use the following endpoint:</p>
+          <h3>GET Weather</h3>
+          <h4>Endpoint</h4>
+          <code>GET /weather</code>
+          <h4>Parameters</h4>
+          <ul>
+            <li>
+              <code>city</code>: The name of the city for which to retrieve
+              weather information.
+            </li>
+            <li>
+              <code>unit</code> (optional): The unit of measurement (e.g.,
+              metric, imperial).
+            </li>
+          </ul>
+          <h4>Example Request</h4>
+          <pre>
+  GET https://api.example.com/weather?city=London&unit=metric
+              </pre
+          >
+          <h4>Example Response</h4>
+          <pre>
+  {
+      "city": "London",
+      "temperature": 15,
+      "unit": "Celsius",
+      "description": "Clear sky"
+  }
+              </pre
+          >
+        </div>
+      </main>
+    </div>
+    <footer>
+      <p>&copy; 2024 User Management API Documentation. All rights reserved. For support, please contact our team via the information provided in this document. Use of this API is subject to our terms and conditions.</p>
+    </footer>
+    
+    <!-- Link GSAP and JS Source -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="../public/scripts/apiDocument.js"></script>
+  </body>
+</html>
