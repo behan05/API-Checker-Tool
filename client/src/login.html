@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Sign up to join our chat application and start connecting with others."
+      content="login to join our chat application and start connecting with others."
     />
 
-    <title>SIGN UP</title>
-    <link rel="stylesheet" href="../public/styles/signup.css" />
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="../public/styles/login.css" />
     <!-- Remix-Icon Links -->
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.4.0/fonts/remixicon.css"
@@ -58,7 +58,7 @@
               >CONTACT</a
             >
           </li>
-          <li><a href="../src/login.html" aria-label="Login">LOGIN</a></li>
+          <li><a href="../src/signup.html" aria-label="Sign Up">SIGN UP</a></li>
         </ul>
 
         <!-- open/close menu icons -->
@@ -68,56 +68,6 @@
         </div>
       </nav>
     </header>
-    <div class="form-container">
-      <form
-        id="signup-form"
-        method="post"
-        aria-labelledby="signup-heading"
-        enctype="multipart/form-data"
-      >
-        <h2 id="signup-heading">Hey there, Sign Up and Connect with Us.</h2>
-
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required />
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
-
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required />
-
-        <label for="confirm-password">Confirm Password:</label>
-        <input
-          type="password"
-          id="confirm-password"
-          name="confirm-password"
-          required
-        />
-
-        <fieldset>
-          <legend>Optional Information</legend>
-
-          <label for="profile-picture">Profile Picture:</label>
-          <input
-            type="file"
-            id="profile-picture"
-            name="profile-picture"
-            accept="image/*"
-          />
-
-          <label for="full-name">Full Name:</label>
-          <input type="text" id="full-name" name="full-name" />
-
-          <label for="dob">Date of Birth:</label>
-          <input type="date" id="dob" name="dob" />
-
-          <label for="phone-number">Phone Number:</label>
-          <input type="text" id="phone-number" name="phone-number" />
-        </fieldset>
-
-        <button type="submit" class="confirmBtn">Confirm</button>
-      </form>
-    </div>
 
     <!-- Link GSAP and JS Source -->
     <script
@@ -126,6 +76,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script src="../public/scripts/signup.js"></script>
+    <script src="../public/scripts/login.js"></script>
   </body>
 </html>
