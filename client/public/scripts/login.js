@@ -1,4 +1,34 @@
 
+async function loginValidation() {
+    const userName = document.getElementById("userName").value;
+    const password = document.getElementById("password").value;
+
+
+    try {
+
+        const response = await fetch("http://localhost:5000/api/auth", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: {
+                
+            }
+        });
+
+    } catch (error) {
+
+    }
+}
+
+
+
+
+
+
+
+
+
 
 // Follow white rounded div to curser when cursor move over window.
 function followCursor() {
