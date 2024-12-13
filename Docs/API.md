@@ -123,7 +123,8 @@ With these endpoints, you can easily test and interact with the API Check Tool. 
 For any questions or feedback, feel free to reach out:
 
 - 📧 Email: [behankrbth@outlook.com](mailto:behankrbth@outlook.com)
-- 💼 LinkedIn: [Behan Kumar](https://www.linkedin.com/in/behan-kumar)
+- 💼 LinkedIn: [Behan Kumar](https://www.linkedin.com/in/behan-kumar-25151b2ba/)
+
 
 ---
 

@@ -60,11 +60,12 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ---
 
 ## Contact
-
 For any questions or feedback, feel free to reach out:
 
 - 📧 Email: [behankrbth@outlook.com](mailto:behankrbth@outlook.com)
-- 💼 LinkedIn: [Behan Kumar](https://www.linkedin.com/in/behan-kumar)
+- 💼 LinkedIn: [Behan Kumar](https://www.linkedin.com/in/behan-kumar-25151b2ba/)
+
+---
 
 ### Changes/Updates:
 
