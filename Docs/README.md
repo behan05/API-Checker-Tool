@@ -61,10 +61,10 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Contact
 
-For any questions or feedback, feel free to reach out to:
+For any questions or feedback, feel free to reach out:
 
-- Email: behankrbth@outlook.com
-- LinkedIn: Behan Kumar
+- 📧 Email: [behankrbth@outlook.com](mailto:behankrbth@outlook.com)
+- 💼 LinkedIn: [Behan Kumar](https://www.linkedin.com/in/behan-kumar)
 
 ### Changes/Updates:
 
@@ -76,6 +76,7 @@ For any questions or feedback, feel free to reach out to:
 This README is now ready for your **API Check Tool** project, and you can copy and paste it into your `README.md` file!
 
 ## Best Wishes ✨
+
 Thank you for taking the time to read through this document and for using the API Check Tool. Your journey in the world of APIs is important and invaluable. We wish you the best of luck in your projects and hope this tool makes your development process smoother and more enjoyable.
 
 Happy coding, and may your APIs always respond just the way you want them to! 🚀💻

@@ -120,10 +120,10 @@ curl -X POST http://localhost:3000/api/test \
 With these endpoints, you can easily test and interact with the API Check Tool. For any additional queries or support, feel free to reach out!
 
 ## Contact
-For more information, contact us at:
+For any questions or feedback, feel free to reach out:
 
-- Email: behankrbth@outlook.com
-- LinkedIn: Behan Kumar
+- 📧 Email: [behankrbth@outlook.com](mailto:behankrbth@outlook.com)
+- 💼 LinkedIn: [Behan Kumar](https://www.linkedin.com/in/behan-kumar)
 
 ---
 
