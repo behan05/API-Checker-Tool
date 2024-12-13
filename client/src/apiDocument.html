@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>User Management API Documentation</title>
     <link rel="stylesheet" href="../public/styles/apiDocument.css" />
-
+    <link
+      rel="shortcut icon"
+      href="../public/images/favicon.svg"
+      type="image/svg+xml"
+    />
     <!-- Remix-Icon Links -->
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.4.0/fonts/remixicon.css"
@@ -37,22 +41,43 @@
         <ul>
           <li>
             <a
-              href="https://behan05.github.io/Production-portfolio/"
-              aria-label="About Portfolio"
-              >PORTFOLIO</a
+              href="../index.html"
+              aria-label="Document Section"
+              >The Launchpad</a
             >
           </li>
-
-          <li><a href="../src/api.html" aria-label="API Section">API</a></li>
-          <li><a href="#" aria-label="Weather Section">WEATHER</a></li>
+          <li>
+            <a
+              href="https://github.com/behan05"
+              target="_blank"
+              aria-label="Portfolio Section"
+              >CodeCrafted</a
+            >
+          </li>
+          <li>
+            <a
+              href="../src/apiDocument.html"
+              aria-label="Document Section"
+              >EndPoint Docs</a
+            >
+          </li>
+          <li>
+            <a href="../src/api.html" aria-label="API Section"
+              >API Wizard</a
+            >
+          </li>
+          <!-- <li><a href="#" aria-label="Weather Section">WEATHER</a></li> -->
           <li>
             <a href="../src/contact.html" aria-label="Contact Section"
-              >CONTACT</a
+              >HelloHub</a
             >
           </li>
-          <li><a href="../src/signup.html" aria-label="Sign Up">SIGN UP</a></li>
+          <li>
+            <a href="../src/signup.html" aria-label="Sign Up"
+              >AccessPro</a
+            >
+          </li>
         </ul>
-
         <!-- open/close menu icons -->
         <div class="header__icons">
           <i class="ri-menu-3-line openMenu" onclick="openMenu()"></i>
@@ -82,7 +107,7 @@
       <main>
         <h1>User Management API Documentation</h1>
 
-        <div class="docsOverview">
+        <div class="docsOverview" id="overview">
           <h2>Overview</h2>
           <p>
             The User Management API allows developers to interact with user data
@@ -92,10 +117,10 @@
           </p>
         </div>
 
-        <div class="mainSection">
+        <div class="mainSection" id="http-methods">
           <h2>HTTP Methods</h2>
 
-          <h3>GET</h3>
+          <h3 id="get-method">GET</h3>
           <p>Use the GET method to retrieve user information.</p>
           <h4>Endpoint</h4>
           <code>GET /users</code>
@@ -124,7 +149,7 @@
          </pre
           >
 
-          <h3>POST</h3>
+          <h3 id="post-method">POST</h3>
           <p>Use the POST method to create a new user.</p>
           <h4>Endpoint</h4>
           <code>POST /users</code>
@@ -159,7 +184,7 @@
               </pre
           >
 
-          <h3>PATCH</h3>
+          <h3 id="patch-method">PATCH</h3>
           <p>Use the PATCH method to update an existing user.</p>
           <h4>Endpoint</h4>
           <code>PATCH /users/{id}</code>
@@ -192,7 +217,7 @@
           >
         </div>
 
-        <div class="section">
+        <div class="section" id="weather-api">
           <h2>Weather API Example</h2>
           <p>To get weather information, use the following endpoint:</p>
           <h3>GET Weather</h3>

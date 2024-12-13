@@ -6,8 +6,8 @@
 }
 
 :root {
-  --primary-color: #fff;
-  --secondary-color: #000;
+  --primary-color: #ccc;
+  --secondary-color: #360033;
   --cta-btn: #20b2aa;
 }
 
@@ -21,10 +21,11 @@ body {
   font-optical-sizing: auto;
   font-weight: initial;
   font-style: normal;
-  background-image: url("../images/landing-page-background.jpg");
+  /* background-image: url("../images/landing-page-background.jpg"); */
   object-fit: cover;
   background-position: 0% 50%;
   user-select: none;
+  background: linear-gradient(to right, #360033, #0b8793);
 }
 
 /* Cursor STYLING */
@@ -80,19 +81,23 @@ nav a {
 }
 
 nav li a[aria-label="Sign Up"] {
-  background-color: var(--cta-btn);
+  background-color: transparent;
+  box-shadow: 0 0 0.2rem var(--cta-btn);
   padding: 0.5rem 2rem;
-  border-radius: 0.8em;
-  font-weight: 900;
-  transition: background-color 1.2s ease-in-out;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, padding 0.3s ease;
 }
 
-nav li a[aria-label="Sign In"]:hover {
+nav li a[aria-label="Sign Up"]:hover {
   background-color: var(--secondary-color);
-  box-shadow: inset 0 0 1rem;
+  color: var(--primary-color);
+  box-shadow: 0 0 0.2rem var(--primary-color);
+  padding: 0.5rem 2.5rem;
 }
+
 nav a:hover {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 1);
 }
 
 /* Header Icon Styling */
@@ -145,7 +150,6 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   overflow: auto;
-
 }
 .contact-container h1 {
   text-align: center;
@@ -206,23 +210,24 @@ nav a:hover {
   box-shadow: inset 0 0 0.2rem var(--cta-btn);
 }
 
+
 #contactForm button {
-  width: 10vw;
   background-color: transparent;
-  padding: 1rem 2rem;
-  border: 1px solid #ccc;
-  box-shadow: inset 0 0 0.2rem;
-  font-size: 1.1rem;
-  margin: 1rem auto;
-  letter-spacing: 0.1rem;
-  transition: background-color 0.6s ease, border-radius 0.4s ease,
-    border 0.6s ease;
+  box-shadow: 0 0 0.2rem var(--cta-btn); 
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-align: left;
+  margin-top: 1rem;
+  border: none;
+  max-width: 50%;
+  transition: background-color 0.3s ease, padding 0.3s ease;
 }
 
 #contactForm button:hover {
-  background-color: var(--cta-btn);
-  border-radius: 12px;
-  border: none;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  padding: 1rem 2.1rem;
 }
 
 /* SCROLLBAR */
@@ -278,7 +283,7 @@ nav a:hover {
   }
 
   #contactForm button {
-    width: 45vw;
+    min-width: 100%;
   }
 }
 

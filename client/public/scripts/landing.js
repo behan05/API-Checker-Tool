@@ -25,7 +25,7 @@ function animateLogo() {
     const logo = document.getElementById("logo");
     gsap.from(logo, {
         scale: 0,
-        duration: 1.8
+        duration: 0.3
     })
 }
 
@@ -35,7 +35,7 @@ function animateNav() {
         y: -100,
         scale: 2,
         opacity: 0,
-        stagger: 0.3
+        stagger: 0.2
     })
 }
 
@@ -72,8 +72,8 @@ function textAnimation() {
     tl.from("#visuals img", {
         y: 100,
         scale: 0,
-        duration: 0.8,
-        delay: 0.8,
+        duration: 0.2,
+        delay: 0.4,
         opacity: 0,
     });
 
@@ -81,21 +81,19 @@ function textAnimation() {
         y: 80,
         scale: 2.5,
         opacity: 0,
-        stagger: 0.1
+        // stagger: 0.1
     });
 
     tl.from("#introduction p", {
         x: -200,
         scale: 0,
         opacity: 0,
-        duration: 0.8
     })
 
     tl.from(".cta-button", {
         x: -200,
         scale: 0,
         opacity: 0,
-        duration: 0.8
     })
 
 }

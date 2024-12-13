@@ -18,7 +18,7 @@ function fetchDataPassToServer() {
                     email,
                     userMessage
                 })
-            }); 
+            });
 
             if (!response.ok) {
                 // convert respons json into js object.
@@ -58,12 +58,9 @@ function animateLogo() {
     const logo = document.getElementById("logo");
     gsap.from(logo, {
         scale: 0,
-        duration: 1.8
+        duration: 0.3
     })
 }
-// ****************************************************************
-
-// ****************************************************************
 
 // Creating animation for Nav Items.
 function animateNav() {
@@ -71,7 +68,7 @@ function animateNav() {
         y: -100,
         scale: 2,
         opacity: 0,
-        stagger: 0.3
+        stagger: 0.2
     })
 }
 // ****************************************************************
@@ -113,7 +110,7 @@ function formAnimation() {
     const tl = gsap.timeline();
     tl.from(".contact-container", {
         opacity: 0,
-        scale: 0,
+        scale: 0
     });
 
     tl.from(".contact-container p", {
@@ -121,6 +118,7 @@ function formAnimation() {
         opacity: 0,
         scale: 2
     })
+
     tl.from(".contact-container h1", {
         y: -100,
         opacity: 0,

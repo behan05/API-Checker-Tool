@@ -75,12 +75,9 @@ function animateLogo() {
     const logo = document.getElementById("logo");
     gsap.from(logo, {
         scale: 0,
-        duration: 1.8
+        duration: 0.3
     })
 }
-// ****************************************************************
-
-// ****************************************************************
 
 // Creating animation for Nav Items.
 function animateNav() {
@@ -88,7 +85,7 @@ function animateNav() {
         y: -100,
         scale: 2,
         opacity: 0,
-        stagger: 0.3
+        stagger: 0.2
     })
 }
 // ****************************************************************

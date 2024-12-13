@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64px" height="64px">
+  <!-- Background Circle -->
+  <circle cx="32" cy="32" r="32" fill="#360033"/>
+
+  <!-- Code Brackets -->
+  <path d="M24 16 L12 32 L24 48" stroke="#00ffff" stroke-width="4" fill="none" />
+  <path d="M40 16 L52 32 L40 48" stroke="#00ffff" stroke-width="4" fill="none" />
+  
+  <!-- Dot for Center Highlight -->
+  <circle cx="32" cy="32" r="4" fill="#ffd700" />
+</svg>

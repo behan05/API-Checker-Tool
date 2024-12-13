@@ -2,12 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #fff;
+  color: #ccc;
 }
 
 :root {
-  --primary-color: #fff;
-  --secondary-color: #000;
+  --primary-color: #ccc;
+  --secondary-color: #360033;
   --cta-btn: #20b2aa;
 }
 
@@ -21,10 +21,11 @@ body {
   font-optical-sizing: auto;
   font-weight: initial;
   font-style: normal;
-  background-image: url("../images/landing-page-background.jpg");
+  /* background-image: url("../images/landing-page-background.jpg"); */
   object-fit: cover;
   background-position: 50% 50%;
   user-select: none;
+  background: linear-gradient(to left, #360033, #0b8793);
 }
 
 /* Cursor STYLING */
@@ -76,23 +77,27 @@ nav a {
   text-decoration: none;
   font-size: 1.4em;
   color: var(--primary-color);
-  transition: color 0.8s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
 nav li a[aria-label="Sign Up"] {
-  background-color: var(--cta-btn);
+  background-color: transparent;
+  box-shadow: 0 0 0.2rem var(--cta-btn);
   padding: 0.5rem 2rem;
-  border-radius: 0.8em  ;
-  font-weight: 900;
-  transition: background-color 1.2s ease-in-out;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, padding 0.3s ease;
 }
 
-nav li a[aria-label="Sign In"]:hover {
+nav li a[aria-label="Sign Up"]:hover {
   background-color: var(--secondary-color);
-  box-shadow: inset 0 0 1rem;
+  color: var(--primary-color);
+  box-shadow: 0 0 0.2rem var(--primary-color);
+  padding: 0.5rem 2.5rem;
 }
+
 nav a:hover {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 1);
 }
 
 /* MAIN STYLING */
@@ -132,21 +137,30 @@ nav a:hover {
 
 /* Call-to-Action Button Styles */
 .cta-button {
-  background-color: var(--cta-btn);
+  background-color: transparent;
+  box-shadow: 0 0 0.2rem var(--cta-btn);
+  background-color: var(--secondary-color);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1.4rem;
   border: none;
-  padding: 0.5em 2.5rem;
-  border-radius: 0.8em;
-  font-size: 1.6em;
-  font-weight: 900;
-  box-shadow: inset 0 0 1rem;
-  transition: background-color 1.2s ease;
-  font-family: "Oxanium", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
+  transition: background-color 0.3s ease, padding 0.3s ease;
 }
 
 .cta-button:hover {
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 1rem 3rem;
+}
+
+.cta-button a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.cta-button:hover.cta-button a {
+  color: var(--secondary-color);
 }
 
 #visuals {

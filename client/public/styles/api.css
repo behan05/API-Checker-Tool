@@ -6,8 +6,8 @@
 }
 
 :root {
-  --primary-color: #fff;
-  --secondary-color: #000;
+  --primary-color: #ccc;
+  --secondary-color: #360033;
   --cta-btn: #20b2aa;
 }
 
@@ -21,9 +21,10 @@ body {
   font-optical-sizing: auto;
   font-weight: initial;
   font-style: normal;
-  background-image: url("../images/landing-page-background.jpg");
+  /* background-image: url("../images/landing-page-background.jpg"); */
   object-fit: cover;
   background-position: 50% 50%;
+  background: linear-gradient(to right, #360033, #0b8793);
 }
 
 /* Cursor STYLING */
@@ -80,19 +81,23 @@ nav a {
 }
 
 nav li a[aria-label="Sign Up"] {
-  background-color: var(--cta-btn);
+  background-color: transparent;
+  box-shadow: 0 0 0.2rem var(--cta-btn);
   padding: 0.5rem 2rem;
-  border-radius: 0.8em;
-  font-weight: 900;
-  transition: background-color 1.2s ease-in-out;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, padding 0.3s ease;
 }
 
-nav li a[aria-label="Sign In"]:hover {
+nav li a[aria-label="Sign Up"]:hover {
   background-color: var(--secondary-color);
-  box-shadow: inset 0 0 1rem;
+  color: var(--primary-color);
+  box-shadow: 0 0 0.2rem var(--primary-color);
+  padding: 0.5rem 2.5rem;
 }
+
 nav a:hover {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 1);
 }
 
 /* Main Section Styling */
@@ -156,6 +161,10 @@ nav a:hover {
 #requestForm select:focus {
   border: 2px solid var(--cta-btn);
 }
+
+#requestForm select:active {
+  background-color: var(--secondary-color);
+}
 /* #requestForm select option {
 
 } */
@@ -168,6 +177,8 @@ nav a:hover {
   outline: none;
   font-size: 1.2rem;
   user-select: none;
+  border: none;
+  box-shadow: 0 0 0.2rem;
 }
 
 #requestForm input::placeholder {
@@ -179,19 +190,24 @@ nav a:hover {
   border: 1px solid var(--cta-btn);
 }
 
+#requestForm input:active {
+  background-color: var(--secondary-color);
+}
+
 #requestForm button {
   padding: 1.2rem 2rem;
   background-color: transparent;
   border: 1px solid var(--primary-color);
   letter-spacing: 0.1rem;
-  transition: border 0.8s ease, padding 0.8s ease-in-out, color 0.8s ease-in-out;
+  transition: border 0.3s ease, padding 0.3s ease-in-out, color 0.3s ease-in-out;
   user-select: none;
 }
 
 #requestForm button:hover {
   border: 2px solid var(--cta-btn);
   padding: 1.2rem 2.5rem;
-  color: var(--cta-btn);
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
 }
 
 #bodyContainer textarea {
@@ -223,7 +239,7 @@ nav a:hover {
   padding: 2rem;
   white-space: pre-wrap; /* Preserves whitespace */
   transition: border 0.8s ease;
-  box-shadow:inset 0 0 1rem var(--cta-btn);
+  box-shadow: inset 0 0 1rem var(--cta-btn);
 }
 
 /* SCROLLBAR */
