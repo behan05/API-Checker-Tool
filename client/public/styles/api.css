@@ -352,7 +352,7 @@ nav a:hover {
 }
 
 /* Styles for tablets */
-@media (min-width: 601px) and (max-width: 1024px) {
+@media (min-width: 601px) and (max-width: 1224px) {
   header {
     position: relative;
     z-index: 10;
@@ -391,7 +391,7 @@ nav a:hover {
 }
 
 /* Styles for laptops */
-@media (min-width: 1025px) and (max-width: 1440px) {
+@media (min-width: 1225px) and (max-width: 1440px) {
   nav {
     flex: 1;
   }
